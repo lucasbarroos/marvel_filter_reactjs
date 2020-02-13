@@ -1,4 +1,4 @@
-# Project Title
+# Marvel Filter Reactjs
 
 A simple ReactJs project to consume the data of the Marvel Api
 
