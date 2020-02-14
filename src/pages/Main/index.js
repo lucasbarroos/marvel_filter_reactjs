@@ -3,6 +3,7 @@ import Grid from '@material-ui/core/Grid';
 import { Container } from './styles';
 import Service from '../../services/Service';
 import HeroeCard from '../../components/HeroeCard';
+import Filter from '../../components/Filter';
 
 const service = new Service();
 
@@ -16,6 +17,7 @@ export default function Dashboard() {
 
   return (
     <Container>
+      <Filter />
       <Grid container spacing={2}>
         {
           characters.map((element) => {
