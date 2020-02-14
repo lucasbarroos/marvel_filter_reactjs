@@ -30,9 +30,9 @@ class Service {
     }
   }
 
-  async show(path) {
+  async show(path, params) {
     try {
-      return await axios.get(`${this.consts.apiUrl}${path}?ts=${consts.ts}&apikey=${consts.publicKey}&hash=${generateHash()}`);
+      return await axios.get(`${this.consts.apiUrl}${path}?ts=${consts.ts}&apikey=${consts.publicKey}&hash=${generateHash()}${params.name ? `&nameStartsWith=${params.name}` : ''}`);
     } catch (error) {
       return ({
         ok: false,

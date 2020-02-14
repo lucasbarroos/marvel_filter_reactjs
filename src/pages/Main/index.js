@@ -3,21 +3,31 @@ import Grid from '@material-ui/core/Grid';
 import { Container } from './styles';
 import Service from '../../services/Service';
 import HeroeCard from '../../components/HeroeCard';
-import Filter from '../../components/Filter';
+import Header from '../../components/Header';
 
 const service = new Service();
 
 export default function Dashboard() {
+  const [name, setName] = React.useState('Hulk');
   const [characters, setCharacters] = useState([])
 
   useEffect(async () => {
-    const result = await service.show('characters');
+    const result = await service.show('characters', {});
     setCharacters(result.data.data.results);
   }, []);
 
+  const changeName = async (e) => {
+    setName(e.target.value);
+  };
+
+  const search = async () => {
+    const result = await service.show('characters', { name });
+    setCharacters(result.data.data.results);
+  }
+
   return (
     <Container>
-      <Filter />
+      <Header name={name} changeName={changeName} search={search} />
       <Grid container spacing={2}>
         {
           characters.map((element) => {
