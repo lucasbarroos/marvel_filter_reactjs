@@ -10,5 +10,9 @@ export const Container = styled.div`
   background-color: rgba(255, 255, 255, 0.1);
   background-repeat: no-repeat;
   background-size: cover;
-  box-shadow: 0px 0px 2px black;
+  box-shadow: 0px 0px 2px goldenrod;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0px 0px 12px goldenrod !important;
+  }
 `;

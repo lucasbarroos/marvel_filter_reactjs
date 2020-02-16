@@ -8,29 +8,25 @@ export default createGlobalStyle`
     padding: 0;
     margin: 0;
     outline: 0;
-    box-sizing: border-box;
     font-family: 'Lato', sans-serif;
-    background-color: #6624fb;
   }
 
   body{
-    background-color: ${(props) => props.theme.colors.background};
     color: #fff;
     font-family: 'Lato', sans-serif;
     text-rendering: optimizeLegibility !important;
     -webkit-font-smoothing: antialiased !important;
+    background-color: #6624fb;
+    overflow-x: hidden;
   }
 
   html, body, #root {
     height: 100%;
+    width: 100vw;
   }
 
   button {
     cursor: pointer;
 
-  }
-
-  .MuiExpansionPanelSummary-content {
-    margin: 0 !important;
   }
 `;

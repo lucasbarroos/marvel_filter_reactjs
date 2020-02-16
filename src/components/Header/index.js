@@ -19,7 +19,7 @@ export default function Header({ name, changeName, search }) {
           <Grid container justify="center" spacing={1}>
             <TextField
               id="standard-multiline-flexible"
-              label="Search by Name"
+              label="Type the Name and Press Enter"
               value={name}
               onChange={changeName}
               onKeyDown={handleKeyDown}
