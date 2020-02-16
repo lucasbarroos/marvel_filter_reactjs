@@ -1,7 +1,7 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';
-import { HeaderBody } from './styles';
+import { HeaderBody, HeaderTitle } from './styles';
 
 // eslint-disable-next-line react/prop-types
 export default function Header({ name, changeName, search }) {
@@ -13,6 +13,7 @@ export default function Header({ name, changeName, search }) {
 
   return (
     <HeaderBody>
+      <HeaderTitle>Marvel Portal</HeaderTitle>
       <Grid container spacing={3}>
         <Grid item lg={12}>
           <Grid container justify="center" spacing={1}>

@@ -12,7 +12,7 @@ export default function Dashboard() {
   const [characters, setCharacters] = useState([])
 
   useEffect(async () => {
-    const result = await service.show('characters', {});
+    const result = await service.show('characters', { name });
     setCharacters(result.data.data.results);
   }, []);
 
